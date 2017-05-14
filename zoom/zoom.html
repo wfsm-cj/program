@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+			.container{
+				width: 1000px;
+				margin: 100px auto;
+				border: 1px solid red;
+			}
+			.container .zoom{
+				width: 400px;height: 400px;
+				float: left;
+				position: relative;
+				border: 1px solid yellow;
+			}
+			
+			.container .shop{
+				float: right;
+				width: 530px;
+				padding: 10px 30px;
+				height: 400px;
+				border: 1px solid;
+			}
+			
+			
+			.container .shop #desc,.container .shop #increase{
+				width: 40px;height: 40px;
+				background-color: #ccc;
+				display: inline-block;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="filter"></div>
+		<!--整个商品的盒子-->
+		<div class="container">
+			<div class="zoom">
+				<img src="images/Tsamll1.jpg" alt="" />
+			</div>
+			<div class="shop">
+				<p><strong>厂家直销 唐怡新款改良真丝长款旗袍 桑蚕丝 双层复古旗袍礼服</strong></p>
+				<p><span>价格 :</span> <b>￥680.00</b></p>
+				<p><span>关注 ：</span> <span>184</span></p>
+				<p><span>尺码 ：</span> <span>S</span><span>S</span><span>S</span></p>
+				<p><span>数量 ：</span> <span id="desc">-</span><input type="text" value="3" /><span id="increase">+</span></p>
+				<p><span>销量 ：</span> <span>1件</span></p>
+				
+				<a href="#">立即订购</a><a href="#">加入购物车</a><a href="#">查看购物车</a>
+				
+			</div>
+		</div>
+	</body>
+</html>
