@@ -1,5 +1,5 @@
 /*h54*/
-html,body,h1,h2,ul,li{
+html,body,h1,h2,ul,li,dl,dd,dt,p{
 	margin: 0;padding: 0;
 }
 html,body{
@@ -12,3 +12,179 @@ li{
 a{
 	text-decoration: none;
 }
+
+
+
+
+.header {
+	height: 35px;
+	width: 100%;
+	background-color: #666;
+	color: #fff;
+}
+
+.nav {
+	height: 35px;
+	width: 1150px;
+	margin: 0 auto;
+}
+.nav li{
+	padding-left: 10px;
+	padding-right: 10px;
+}
+.nav a {
+	display: inline-block;
+	font-size: 14px;
+	color: #fff;
+	padding: 10px 10px;
+	height: 15px;
+}
+
+.nav .nav-left {
+	float: left;
+
+}
+
+.nav .nav-right {
+	float: right;
+}
+
+.nav .nav-right li {
+	float: left;
+	/*vertical-align: middle;*/
+	
+}
+
+.nav .nav-right li:nth-child(2n) {
+	color: #ccc;
+	margin-top: 8px;
+}
+.nav .nav-right .phone{
+	display: inline-block;
+	height: 23px;
+	/*width: 34px;*/
+	text-indent: 5px;
+	background: url(../../婚纱摄影/img/newglobal.png) 0 -404px no-repeat;
+}
+.nav .nav-right .phone:hover{
+	background: url(../../婚纱摄影/img/newglobal.png) 0 -436px no-repeat;
+}
+
+.nav .nav-right .shop{
+	display: inline-block;
+	height: 16px;
+	/*width: 34px;*/
+	text-indent: 5px;
+	background: url(../../婚纱摄影/img/newglobal.png) 0 -343px no-repeat;
+}
+.nav .nav-right .shop:hover{
+	background: url(../../婚纱摄影/img/newglobal.png) 0 -367px no-repeat;
+}
+
+.nav .history{
+	position: relative;
+}
+.nav .triangle{
+	border: 5px solid red;
+	border-bottom: none;
+	border-left-color: transparent;
+	border-right-color: transparent;
+	position: absolute;
+	top: 18px;
+	right: -6px;
+}
+
+.nav #station{
+	position: relative;
+}
+/*.nav .history:hover .triangle{
+	transform: rotate(180deg);
+	transition: all 1s;
+}*/
+.nav li:nth-last-of-type(1){
+	position: relative;
+}
+
+/*网站导航盒子*/
+.nav .station-box{
+	position: absolute;
+	top: 35px;
+	left: -260px;
+	width: 335px;
+	/*height: 100px;*/
+	background-color: #fff;
+	border: 1px solid #ccc;
+	box-shadow: 1px 1px 3px #ccc;
+	z-index: 99;
+	padding: 10px;
+	display: none;
+}
+.nav .station-box dl{
+	
+	float: left;
+	border-left: 1px solid #eee;
+	padding: 10px;
+}
+.nav .station-box dl:nth-of-type(1){
+	border: none;
+}
+.nav .station-box dl dt{
+	color: #222222;
+	font-size: 14px;
+}
+.nav .station-box dl dd{
+	color: #999;
+	font-size: 12px;
+	margin: 5px 0;
+}
+.nav .station-box dl dd a{
+	color: #999999;
+	font-size: 12px;
+	margin: 0 5px;
+	padding: 0;
+	text-indent: -5px;
+}
+.nav .station-box dl dd a:hover{
+	color: red;
+}
+
+
+
+
+/*footer的样式*/
+.footer{
+				width: 100%;
+				background-color: #666;
+				color: #fff;
+				font-size: 14px;
+			}
+			.footer .foot-box{
+				width: 80%;
+				margin: 0 auto;
+			}
+			.footer dl{
+				width: 100%;
+				height: 20px;
+			}
+			.footer dl dt{
+				float: left;
+				height: 20px;
+				line-height: 20px;
+			}
+			.footer dl dd{
+				float: left;
+				text-indent: 4em;
+				height: 20px;
+				line-height: 20px;
+			}
+			.footer dl dd a{
+				padding: 0 10px;
+				color: #fff;
+			}
+			.footer p{
+				width: 100%;
+				text-align: center;
+			}
+			
+
+/*footer的样式*/

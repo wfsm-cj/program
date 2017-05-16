@@ -1,0 +1,331 @@
+/*css 初始化 */
+html, body, a, ul, li, ol, dl, dd, dt, p, h1, h2, h3, h4, h5, h6, form, fieldset, legend, img {
+    margin: 0;
+    padding: 0;
+}
+
+/*各浏览器显示不同，去掉边框等默认样式*/
+fieldset, img, input, button {
+    border: none;
+    padding: 0;
+    margin: 0;
+    outline-style: none;
+}
+
+ul, ol {
+    list-style: none;
+}
+
+input {
+    padding-top: 0;
+    padding-bottom: 0;
+    font-family: "SimSun", "宋体";
+}
+
+select, input, textarea {
+    font-size: 12px;
+    margin: 0;
+}
+
+/*去掉行内替换元素空白缝隙*/
+img {
+    border: 0;
+    vertical-align: middle;
+}
+
+/*清除浮动*/
+.clearfix:before, .clearfix:after {
+    content: "";
+    display: table;
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+.clearfix {
+    *zoom: 1; /*IE/7/6*/
+}
+
+a {
+    color: #666;
+    text-decoration: none;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    text-decoration: none;
+    font-weight: normal;
+    font-size: 100%;
+}
+
+/*废物利用*/
+s, i, em {
+    font-style: normal;
+    text-decoration: none;
+}
+
+/*公共类*/
+.w {
+    /*版心 提取 */
+    width: 1210px;
+    margin: 0 auto;
+}
+
+.fl {
+    float: left;
+}
+
+.fr {
+    float: right;
+}
+
+/*瀑布流上部*/
+.waterfallTop {
+    width: 100%;
+    margin-bottom: 50px;
+}
+
+.navbar {
+    width: 100%;
+    height: 100px;
+    background: aqua;
+}
+
+.main {
+    height: 620px;
+    padding-top: 20px;
+    background: oldlace;
+    position: relative;
+}
+
+.m-left {
+    width: 200px;
+    height: 400px;
+    /*background: url(../images/rig.png) center no-repeat;*/
+    margin-top: 30px;
+    position: absolute;
+    transform: perspective(1200px) rotateY(40deg) !important;
+    transform-origin: 110% 25%;
+    left: 22%;
+    border-radius: 5px;
+    cursor: pointer;
+    /*margin-left: -199px;*/
+    margin-left: -236px;
+    transition: all 0.2s;
+    -webkit-transition: all 0.2s;
+    -o-transition: all 0.2s;
+    -moz-transition: all 0.2s;
+    box-shadow: 5px 5px 5px #ccc;
+}
+
+.m-left:hover {
+    margin-left: -244px;
+    transform: perspective(1200px) rotateY(0deg) !important;
+}
+
+.imgbig {
+    background: #aaa;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 5;
+    display: none;
+}
+
+.imgbig span {
+    position: absolute;
+    top: -5px;
+    left: 64%;
+    font-size: 30px;
+    color: #fff;
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    line-height: 50px;
+    z-index: 6;
+    cursor: pointer;
+}
+
+.imgbig img {
+    position: absolute;
+    top: 10px;
+    left: 50%;
+    margin-left: -300px;
+}
+
+#center {
+    width: 762px;
+    height: 452px;
+    /*background: rgba(255, 255, 255, 0.4);*/
+    position: absolute;
+    z-index: 2;
+    left: 50%;
+    top: 14px;
+    margin-left: -381px;
+}
+
+#img {
+    width: 700px;
+    height: 400px;
+    background: url(../images/waterslice1.jpg) center no-repeat;
+    position: absolute;
+    left: 31px;
+    top: 26px;
+}
+
+#btns {
+    width: 762px;
+    margin: -18px auto;
+    text-align: center;
+    position: absolute;
+    z-index: 1;
+    border-bottom: 10px;
+    bottom: -60px;
+}
+
+#btns input {
+    width: 100px;
+    height: 64px;
+    margin-right: 36px;
+    /*font-size: 30px;*/
+    /*font-family: "华文新魏";*/
+    border: 2px solid rgba(0, 0, 0, 0.4);
+    /*border-radius: 5px;*/
+    box-shadow: inset 0 1px 0px rgba(255, 255, 255, 0.9);
+    text-shadow: 0 -1px 1px black;
+    /*color: rgba(255, 255, 255, 1);*/
+}
+
+#btns img {
+    width: 123px;
+}
+
+#btns a {
+    margin-right: 16px;
+}
+
+#btns #lasta {
+    margin-right: -2px;
+}
+
+#btns .line {
+    background-color: #f00;
+    display: block;
+    position: absolute;
+    transition: all 0.2s ease;
+    -webkit-transition: all 0.2s ease;
+    -o-transition: all 0.2s ease;
+    -moz-transition: all 0.2s ease;
+}
+
+.btnstyle {
+    display: inline-block;
+    position: relative;
+}
+
+/*
+	设置顶部的线条  从左向右过渡到按钮的上边框位置
+	高度不变 2px
+	宽度由0-》180px
+*/
+
+#btns .line-top {
+    width: 0px;
+    height: 2px;
+    top: 0px;
+    left: -100%;
+}
+
+#btns .btnstyle:hover .line-top {
+    width: 123px;
+    left: 0px;
+}
+
+/*
+	设置底部的线条  从右向左过渡到按钮的下边框位置
+	高度不变 2px
+	宽度由0-》180px
+*/
+
+#btns .line-bottom {
+    width: 0px;
+    height: 2px;
+    bottom: 0px;
+    right: -100%;
+}
+
+#btns .btnstyle:hover .line-bottom {
+    width: 123px;
+    right: 0px;
+}
+
+/*
+	设置左部的线条  从下向上过渡到按钮的左边框位置
+	宽度不变 2px
+	高度由0-》49px
+*/
+
+#btns .line-left {
+    width: 2px;
+    height: 0px;
+    bottom: -100%;
+    left: 0px;
+}
+
+#btns .btnstyle:hover .line-left {
+    height: 72px;
+    bottom: 2px;
+}
+
+/*
+	设置右部的线条  从上向下过渡到按钮的右边框位置
+	宽度不变 2px
+	高度由0-》49px
+*/
+
+#btns .line-right {
+    width: 2px;
+    height: 0px;
+    top: -100%;
+    right: 0px;
+}
+
+#btns .btnstyle:hover .line-right {
+    height: 72px;
+    top: 2px;
+    right: 0px;
+}
+
+.m-right {
+    width: 200px;
+    height: 400px;
+    /*background: url(../images/lef.jpg) center no-repeat;*/
+    margin-top: 30px;
+    position: absolute;
+    transform: perspective(1200px) rotateY(-40deg) !important;
+    transform-origin: -10% 25%;
+    left: 80%;
+    border-radius: 5px;
+    cursor: pointer;
+    box-shadow: 5px 5px 5px #ccc;
+    transition: all 0.2s;
+    -webkit-transition: all 0.2s;
+    -o-transition: all 0.2s;
+    -moz-transition: all 0.2s;
+}
+.m-right span,.m-left span{
+    position: absolute;
+    bottom: 10px;
+    left: 70px;
+    color: #aaa;
+    font-size: 16px;
+}
+.m-right:hover {
+    transform: perspective(1200px) rotateY(0deg) !important;
+    /*transform: scale(1.2) rotate(180deg);*/
+    /*-webkit-transform: scale(1.2) rotate(360deg);*/
+    /*-o-transform: scale(1.2) rotate(360deg);*/
+    /*-moz-transform: scale(1.2) rotate(360deg);*/
+}

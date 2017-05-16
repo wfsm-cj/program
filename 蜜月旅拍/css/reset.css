@@ -1,0 +1,37 @@
+
+h1, h2, h3, h4, h5, h6, em, del {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 100%;
+    -webkit-text-size-adjust: none;
+}
+
+ul, dl, ol {
+    list-style: none;
+}
+
+h2, h2 a {
+    margin-bottom: 50px;
+    font-size: 16px;
+    text-align: center;
+    color: #666;
+    text-decoration: none;
+}
+
+h2 a:hover {
+    text-decoration: underline;
+}
+
+/*Çå³ý¸¡¶¯*/
+.clearfix:before, .clearfix:after {
+    content: "";
+    display: table;
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+.clearfix {
+    *zoom: 1; /*IE/7/6*/
+}
