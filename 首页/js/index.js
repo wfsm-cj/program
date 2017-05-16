@@ -97,7 +97,7 @@ $(document).ready(function(){
 		$("#fullScreen").hover(function(){
 			clearInterval(timer);
 		},function(){
-			timer=setInterval(move,2000)
+			timer=setInterval(move,3000)
 		})
 		.trigger("mouseleave")//设置trigger  触发被选元素的指定事件类型
 		

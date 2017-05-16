@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+			.box{
+				width: 200px;
+				height: 200px;
+				position: relative;
+				border: 1px solid #ccc;
+			}
+			.box span{
+				position: absolute;
+				bottom: 0;
+				color: red;
+			}
+			
+			
+		</style>
+	</head>
+	<body>
+		
+		<!--<div class="box" style="background:url(1.jpg) no-repeat center center">
+			<span>hello</span>
+		</div>-->
+		
+		<div id="box" ></div>
+		<script src="template-web.js"></script>
+		
+		<script type="text/html" id="test">
+			<% for(var i=0;i<bgUrl.length;i++){%>
+			<div class="box" style="background: url(<%=bgUrl[i]%>);">
+				<!--<% for(var j=0;j<info.length;j++){%>
+					<span><%=info[j]%></span>
+				<% } %>-->
+				
+				<span><%=info[i]%></span>
+			</div>
+			
+			<% } %>
+		</script>
+		<script>
+			var data={
+				bgUrl:["1.jpg","10.jpg","1.jpg"],
+				info:["aaa","bbb"]
+			}
+			var html=template("test",data);
+			document.getElementById("box").innerHTML=html;
+		</script>
+		
+		<!--<script>
+			var htm
+		</script>-->
+		
+		<!--<script type="text/html">
+			<input type="text" value="eee" />
+			<%console.log("aaa")%>
+		</script>-->
+		<!--<h3>
+			<script type="text/html">
+				<%console.log("aaa")%>
+			</script>
+		</h3>-->
+		
+		<!--<h1><%=title%></h1>
+		<ul>
+			<%for(i = 0; i < list.length; i ++) {%>
+    		<li>条目内容 <%=i + 1%> ：<%=list[i]%></li>
+			<%}%>
+		</ul>-->
+		
+		
+		<!--<script type="text/html" id="hello">
+			<h1><%=title%></h1>
+			<% for(var i=0;i<list.length;i++){%>
+			<p><%=list[i]%></p>
+			
+			<% } %>
+		</script>
+		
+		<script>
+			var data={
+				title:"my world",
+				list:["a","b","c","d","e","f"]
+			};
+			var html=template("hello",data);
+			document.getElementById("box").innerHTML=html;
+		</script>-->
+	</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		
+		<script src="js/require.js"></script>
+		<script>
+//			define(名字,[依赖于什么模块以数组表示没有依赖可以省略],function());//实现模块定义  ，， 第一个参数是一个字符串
+//			define("index.js",function(){
+//				console.log("index.....")
+//			});
+			require.config({
+				paths:{
+					"index":"js/index"
+				}
+			})
+			require(["index"],function(myIndex){
+				console.log(arguments)
+				myIndex.show()
+			})//不加.js
+//			require([依赖于指定的模块],function(){
+//				
+//			});
+		</script>
+	</body>
+</html>

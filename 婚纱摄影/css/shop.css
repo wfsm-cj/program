@@ -1,0 +1,31 @@
+.header{
+	height: 35px;
+	width: 100%;
+	background-color: #666;
+	color: #fff;
+}
+.nav{
+	height: 35px;
+	width: 100%;
+}
+.nav a{
+	display: inline-block;
+	font-size: 14px;
+	color: yellow;
+	padding: 7px 10px;
+	height: 15px;
+}
+.nav .nav-left{
+	float: left;
+}
+.nav .nav-right{
+	float: right;
+}
+
+.nav .nav-right li{
+
+	float: left;
+}
+.nav .nav-right li:nth-child(2n){
+	color: red;
+}

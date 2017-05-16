@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		
+		<link rel="stylesheet" href="../首页/css/base.css" />
+		<link rel="stylesheet" href="css/iconfont.css" />
+		<style>
+			body{
+				background: url(img/wallhaven-56481.jpg);
+			}
+			#login{
+				width: 390px;
+				/*height: 450px;*/
+				margin: 200px auto;
+				border: 1px solid #ccc;
+				background-color: #fff;
+			}
+			#login h2{
+				text-align: center;
+				height: 60px;
+				line-height: 60px;
+				font-size: 26px;
+				background-color: lightblue;
+				opacity: 0.4;
+				color: 222;
+				font-family: "微软雅黑";
+				margin-bottom: 10px;
+				/*text-align: center;*/
+			}
+			
+			
+			#login p{
+				/*display: inline-block;*/
+				margin: 8px auto;
+				height: 60px;
+				width: 330px;
+				/*height: 70px;*/
+				/*border: 1px solid #666;*/
+			}
+			#login p input{
+				width: 330px;
+				height: 40px;
+				text-indent: 1em;
+				outline: none;
+				border: 1px solid #555;
+				box-sizing: border-box;
+			}
+			#login p  span{
+				color: red;
+				font-style: italic;
+				line-height: 30px;
+				
+			}
+			#login p a{
+				color: #666;
+				font-size: 12px;
+				float: right;
+				margin-right: 8px;
+				line-height: 30px;
+			}
+			
+			#login #code{
+				width: 220px;
+				height: 40px;
+				float: left;
+			}
+			#login #picCode{
+				height: 40px;
+				width: 100px;
+				float: right;
+				color: blue;
+				font-family: arial;
+				font-style: italic;
+				font-weight: bold;
+				font-size: 16px;
+				letter-spacing: 5px;
+			}
+			
+			#login  #btn{
+				width: 330px;
+				height: 40px;
+				background-color: lightblue;
+				color: #fff;
+				font-weight: bold;
+				margin: 3px auto;
+				display: block;
+			}
+			#login label{
+				margin-left: 25px;
+				margin-top: 8px;
+			}
+			#login ul{
+				width: 330px;
+				height: 40px;
+				margin: 20px 25px;
+				
+			}
+			
+			#login ul li{
+				float: left;
+				font-size: 40px;
+				height: 40px;
+				margin:0 21px;
+				color: #999;
+				/*line-height: 40;*/
+			}
+			
+			#login .foot{
+				width: 330px;
+				margin: 0 auto;
+				margin-bottom:20px; 
+			}
+			
+			#login .foot a{
+				color: #888;
+				font-size: 14px;
+			}
+			#login .foot a:nth-of-type(3){
+				float: right;
+			}
+		</style>
+	</head>
+	<body>
+		<form action="#" id="login">
+			<h2>登&nbsp;&nbsp;&nbsp;&nbsp;录</h2>
+			<p>
+				<input type="text" placeholder="请输入邮箱或电话号码" id="emailTel"/>
+				<span></span>
+			</p>
+			<p>
+				<input type="password" placeholder="密码" id="password"/>
+				<span></span>
+			</p>
+			<p>
+				<input type="text"  placeholder="图片验证码" id="code"/>
+				<input type="text" readonly="readonly" id="picCode"/>
+				<span ></span>
+				<a href="#">忘记密码</a>
+			</p>
+			
+				
+			<input type="submit" value="登&nbsp;&nbsp;&nbsp;&nbsp;录" id="btn"/>
+			
+			<label for="rem"><input type="checkbox" id="rem"/>记住我</label>
+			
+			<ul id="choose">
+				<li class="iconfont icon-qq"></li>
+				<li class="iconfont icon-iconfontweibo"></li>
+				<li class="iconfont icon-taobao"></li>
+				<li class="iconfont icon-weixin"></li>
+			</ul>
+			<div class="foot">
+				<a href="#">用户名登录</a><span style="color:#888">&nbsp;|&nbsp;</span><a href="#">境外手机登录</a><a href="register.html">立即注册</a>
+			</div>
+		</form>
+		
+		
+		<script src="../jquery-1.12.4.js"></script>
+		<script src="base.js"></script>
+		<script src="login.js"></script>
+	</body>
+</html>
