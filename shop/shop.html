@@ -101,7 +101,7 @@
 			<% for(var i=0;i<price.length;i++){%>
 			<div class="cheap-box" >
 		 		<img src="<%=imgUrl[i]%>" alt="" />
-		 		<p><a href="#"><%=tip[i]%></a></p>
+		 		<p><a href="../shangpingxiangqing/info.html"><%=tip[i]%></a></p>
 		 		<p><span><%=info[i]%></span></p>
 		 		<p class="price"><em>￥</em><b><%=price[i]%></b><span class="bg">预约有礼</span><span>门店价￥<%=highPrice[i]%></span></p>
 		 		<div class="cheap-bottom"><span>已有365人关注</span><span>维纳婚纱摄影</span></div>
@@ -109,12 +109,13 @@
 		 	
 		 	<% } %>
 		</script>
-		
+		<script src="../common/jquery.cookie.js"></script>
 		<script src="js/shop.js"></script>
 		
 		<!--导航的js-->
 		<script>
-			
+//			var user=$.cookie("emailTel")
+//			$("#user").text(user)
 		</script>
 	</body>
 </html>

@@ -128,7 +128,7 @@ $(document).ready(function(){
 			if(nextIndex>len-1){
 				currentIndex=1;
 				nextIndex=currentIndex+1;
-				console.log(currentIndex)
+//				console.log(currentIndex)
 				$ul.animate({left:-currentIndex*imgWidth},0);//单线程 会先执行下面内容 animate
 			}
 			if(nextIndex<=1){//在这之前有个nextIndex++  
@@ -140,3 +140,142 @@ $(document).ready(function(){
 	}
 	
 	
+
+//第三部分js
+$("#container-3 #container-3-prev").on("click",function(){
+				var _left=-1*$("#container-3 .pic3-left").outerWidth();
+//				console.log(_left);
+				$("#container-3 .pic3-left").animate({
+					left:_left
+				},2000)
+			})
+
+$("#container-3 #container-3-next").on("click",function(){
+				var _left=0;
+//				console.log(_left);
+				$("#container-3 .pic3-left").animate({
+					left:_left
+				},2000)
+			})
+
+
+
+
+//第四部分
+	var $img4=$(".container-4-right li");
+//	console.log($img4)
+	var img4Width=$(".container-4-right li").outerWidth(true);
+	var len4=$img4.length;
+	var $ul4=$(".container-4-right ul");
+	$ul4.width(img4Width*len4)
+	var maxLen=(len4-1)*img4Width-$(".container-4-right-box").outerWidth();
+	
+	console.log(img4Width,len4,maxLen)
+	var index4=0;//当前商品索引
+	var next4=1;
+	$("#container-4-next").on("click",function(){
+		var _left=img4Width*next4*-1;
+		
+//		if(_left)
+			console.log(_left,maxLen)
+		if(Math.abs(_left)>=maxLen){
+				console.log("Aa")
+				$("#container-4-next").addClass("disabled").siblings().removeClass("disabled");
+			}else{
+				$ul4.animate({
+					left:_left
+				},1000,function(){
+					index4=next4;
+					next4++;
+					if(index4>len4-4){
+						index4=0;
+						next4=0;
+					}
+				})
+				$("#container-4-next").removeClass("disabled")
+			}
+	})
+	
+	$("#container-4-prev").on("click",function(){
+		
+		var _left=img4Width*next4*-1;
+		
+		if(Math.abs(_left)<=0){
+			$("#container-4-prev").addClass("disabled").siblings().removeClass("disabled");
+		}else{
+			$ul4.animate({
+				left:_left
+			},1000,function(){
+				next4--;
+				if(next4<0){
+					next4=0;
+				}
+			})
+			$("#container-4-prev").removeClass("disabled");
+			
+		}
+		
+		
+		if($ul4.css("left")<=0){
+		$("#container-4-prev").addClass("disabled").siblings().removeClass("disabled");
+		}
+	})
+
+
+
+	//左侧边栏
+			$("#sidebar").delegate(".sbar","mouseenter",function(){
+				$(this).stop().animate({width:200},500).children("span").show()
+				.end().siblings().stop().animate({width:45},500).children("span").hide();
+			})
+			$("#sidebar").delegate(".sbar","mouseleave",function(){
+				$(this).stop().animate({width:45},500).children("span").hide()
+			})
+			$("#totop").on("click",function(){
+//				$(window).scrollTop(0);
+//				$(window).animate({scrollTop:0},2000)//不是让window做动画是html或body
+				$("html,body").stop().animate({scrollTop:0},2000);
+			})
+			
+
+
+
+//		滚动函数
+
+			//滚动函数
+			
+			var isScroll=true;
+			var currIndex=0;
+			var $circles=$("#navButtons ul li");
+			$("#navButtons").delegate("li","click",function(){
+				isScroll=false;
+//				console.log(currIndex)
+				var clickIndex=$(this).index();
+				scrollHandler(currIndex,clickIndex);
+				
+			})
+			$(window).on("scroll",function(){
+				if(!isScroll){
+					return;
+				}
+				var currHeight=$(window).scrollTop();
+				currIndex=Math.floor(currHeight/($(window).height()-55));//翻过了多少层
+				//小圆点index由0开始
+				$circles.eq(currIndex).addClass("current").siblings().removeClass("current");
+				
+			})
+			
+			
+//			function initPagesSize(){
+//				nowWindowHeight=$(window).height();
+//			}
+			
+			//要滚到的索引
+			function scrollHandler(currIndex,clickIndex){
+				$circles.eq(clickIndex).addClass("current").siblings().removeClass("current");
+				var _top=clickIndex*$(window).height();
+				$("html,body").animate({scrollTop:_top},2000,function(){
+					isclick=true;
+				})
+				
+			}

@@ -36,6 +36,18 @@ $.ajax({
 				$(this).css("background","#666").children(".station-box").css("display","none").end()
 				.children("a").css("color","#fff");
 			})
+			
+//			$.cookie.json=true;
+//			$.cookie("emailTel","hello",{expires:7,path:'/'})
+//		console.log("aaa")
+			var user=$.cookie("emailTel")
+			
+			console.log(user);
+			$("#user").text("欢迎"+user)
+			
+//			$("#user")
+			
+			
 		
 	}
 });

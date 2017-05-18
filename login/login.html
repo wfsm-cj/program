@@ -6,6 +6,7 @@
 		
 		<link rel="stylesheet" href="../首页/css/base.css" />
 		<link rel="stylesheet" href="css/iconfont.css" />
+		
 		<style>
 			body{
 				background: url(img/wallhaven-56481.jpg);
@@ -143,7 +144,7 @@
 				
 			<input type="submit" value="登&nbsp;&nbsp;&nbsp;&nbsp;录" id="btn"/>
 			
-			<label for="rem"><input type="checkbox" id="rem"/>记住我</label>
+			<label for="rem"><input type="checkbox" id="rem" checked="checked"/>记住我</label>
 			
 			<ul id="choose">
 				<li class="iconfont icon-qq"></li>
@@ -158,7 +159,29 @@
 		
 		
 		<script src="../jquery-1.12.4.js"></script>
+		<script src="../common/jquery.cookie.js"></script>
 		<script src="base.js"></script>
 		<script src="login.js"></script>
+		
+		<script>
+//			$("#login").submit(function(e){
+//				e.preventDefault()
+////				$.cookie.json="true";
+//				var _emailTel=$("#emailTel").val();
+//				var _password=$("#password").val();
+//				console.log(_emailTel,_password)
+//				var isChecked=$("#rem")[0].checked;
+//
+////				$.cookie("emailTel");
+//				if(isChecked){
+////					console.log("aaa")
+//					$.cookie("emailTel",_emailTel,{expires:7});
+//					$.cookie("password",_password,{expires:7});
+//				}
+//				
+//			})
+				console.log($.cookie("emailTel"))
+				console.log($.cookie("password"))
+		</script>
 	</body>
 </html>

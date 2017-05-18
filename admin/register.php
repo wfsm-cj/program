@@ -18,14 +18,16 @@
 	
 	
 	
-	$sql="select * from user where emailtel='".$emailTel."' and password='".$password."'";
+	$sql="select * from user where emailtel='".$emailTel."'";
 	
 	$result=mysql_query($sql,$conn);
 	
 	if(is_array(mysql_fetch_array($result))){  //判断用户名是否存在
-		echo "true";
+		echo "false";//注册失败
 	}else{
-		echo "false";
+		$sql="INSERT INTO user VALUES(NULL,'$emailTel','$password')";
+		$result=mysql_query($sql,$conn);
+		echo "true";
 	}
-	
+
 ?>

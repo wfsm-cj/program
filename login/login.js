@@ -43,7 +43,8 @@ $(document).ready(function(){
 	
 	
 	
-	$("#login").submit(function(){
+	$("#login").submit(function(e){
+		e.preventDefault();//阻止默认事件 全局刷新
 //		console.log(isEmailTel)
 		if(isEmailTel===true && isPassword===true && isCode===true){//数据onblur后再执行 写的默认数据不会执行这两个函数
 			var _emailTel=$("#emailTel").val();
@@ -59,7 +60,12 @@ $(document).ready(function(){
 				success:function(data){
 					console.log(data)
 					if(data=="true"){
-						location.href="../shop/shop.html";
+						//存入cookie
+//						console.log(_emailTel,_password)
+//						$.cookie()
+						$.cookie("emailTel",_emailTel,{expires:7,path:'/'})
+						$.cookie("password",_password,{expires:7,path:'/'})
+//						location.href="../shop/shop.html";
 					}else{
 						$("#login").html("登陆失败,请重新登陆");
 					}

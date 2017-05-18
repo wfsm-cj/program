@@ -45,9 +45,32 @@ a{
 
 }
 
+.nav .nav-left span{
+	float: left;
+}
+.nav .nav-left #userspan{
+	border: 1px solid red;
+	/*display: inline-block;*/
+	width: 100px;
+	/*height: 30px;*/
+	/*line-height: 30px;*/
+	overflow: hidden;
+}
+.nav .nav-left #user{
+	width: 100px;
+	height: 30px;
+	display: inline-block;
+}
+/*.nav .nav-left #user{
+	display: inline-block;
+	border: 1px solid red;
+	width: 100px;
+	overflow: hidden;
+}*/
 .nav .nav-right {
 	float: right;
 }
+
 
 .nav .nav-right li {
 	float: left;
