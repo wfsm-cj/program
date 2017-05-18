@@ -4,13 +4,316 @@
 		<meta charset="UTF-8">
 		<title></title>
 		<link rel="stylesheet" href="../首页/css/base.css" />
+		
+		<style>
+			.content{
+				width: 963px;
+				/*height: 500px;*/
+				overflow: hidden;
+				border: 1px solid red;
+				margin: 50px auto;
+				background-color: #fff;
+			}
+			.content .left{
+				float: left;
+				margin-bottom: 50px;
+			}
+			.content .left .big{
+				width: 400px;
+				height: 333px;
+				position: relative;
+				/*height: 400px;*/
+			}
+			.content .left .big img{
+				width: 400px;
+				position: absolute;
+				top: 0;
+				left: 0;
+				display: none;
+			}
+			.content .left .big .current{
+				display: block;
+			}
+			.content .left ul {
+				width: 400px;
+				/*height: 300px;*/
+				padding-top: 20px;
+			}
+			.content .left ul li{
+				width: 68px;
+				height: 68px;
+				float: left;
+				margin: 0 12px;
+				box-sizing: border-box;
+				overflow: hidden;
+			}
+			.content .left ul li img{
+				width: 68px;
+				height: 68px;
+			}
+			.content .left ul li:hover{
+				border: 1px solid red;
+			}
+			.content .left ul li.curr{
+				border: 1px solid red;
+				
+			}
+			
+			.content .right{
+				float: right;
+				/*border: 1px solid blue;*/
+				width: 530px;
+				height: 300px;
+				
+			}
+			.content .right h3{
+				margin-top: 20px;
+				font-weight: normal;
+				
+			}			
+			.content .right p{
+				font-size: 14px;
+				color: #666;
+				margin: 15px 0;
+
+			}
+			.content .right .price{
+				color: deeppink;
+				font-size: 20px;
+				margin-right:20px ;
+			}
+			.content .right .highPrice{
+				color: #666;
+				text-decoration: line-through;
+				font-size: 12px;
+			}
+			
+			.content .right input:nth-of-type(1){
+				width: 130px;
+				height: 40px;
+				color: #fff;
+				background-color: deeppink;
+				font-weight: bold;
+				font-size: 18px;
+				border: 1px solid deeppink;
+				outline: none;
+			}
+			.content .right input:nth-of-type(2){
+				width: 130px;
+				height: 40px;
+				color: deeppink;
+				background-color: pink;
+				font-weight: bold;
+				font-size: 18px;
+				border: 1px solid deeppink;
+				outline: none;
+				
+			}
+			
+			.content .introduce{
+				clear: both;
+				width: 922px;
+				height: 36px;
+				background-color: #ccc;
+				border: 1px solid #666;
+				font-size: 18px;
+				line-height: 36px;
+				text-indent: 1em;
+				margin: 50px auto;
+			}
+			
+			.content  .intro-box{
+				width: 922px;
+				margin: 0 auto 30px;
+			}
+			.content .intro-box b{
+				border-bottom: 1px dashed #000;
+				width: 100%;
+				display: block;
+				font-size: 20px;
+				padding-bottom: 15px;
+				margin-bottom: 15px;
+			}
+			.content .intro-box p{
+				font-size: 14px;
+				margin: 3px 0;
+			}
+		</style>
 	</head>
-	<body>
+	<body style="background: #e7e7e7;">
 		<header class="header"></header>
+		
+		<div class="content">
+			<div class="left" >
+				<div class="big">
+					<img src="img/tab2600_500_1.jpg" alt="" class="current"/>
+					<img src="img/tab2600_500_2.jpg" alt="" />
+					<img src="img/tab2600_500_3.jpg" alt="" />
+					<img src="img/tab2600_500_4.jpg" alt="" />
+				</div>
+				<ul>
+					<li class="curr"><img src="img/tab1300_300_1.jpg" alt="" /></li>
+					<li ><img src="img/tab1300_300_2.jpg" alt="" /  ></li>
+					<li><img src="img/tab1300_300_3.jpg" alt="" /></li>
+					<li><img src="img/tab1300_300_4.jpg" alt="" /></li>
+				</ul>
+			</div>
+			<div class="right">
+				<h3>【新品发布】2017全新婚照主题尝鲜体验 </h3>
+				<p>婚纱照，就要与众不同</p>
+				<div><span class="price">￥3999</span><span class="highPrice">市场价￥4999</span></div>
+				<p><span style="color: deeppink;margin-right: 10px;">到店礼</span><span>在线预约【专车接驾+优先抢档】</span></p>
+				<p><span style="color: deeppink;margin-right: 10px;">优惠券</span><span>凭此券可免费领取1000元现金红包</span></p>
+				<p>已有<span style="color: deeppink;font-weight: bold;">3052</span>人关注该折扣</p>
+				<input type="submit" value="预约购买"  />
+				<input type="button" value="私信商家" />
+			</div>
+			<div class="introduce" >套餐介绍</div>
+			<div class="intro-box">
+				<b>造型</b>
+				<p>造型数量</p>
+				<p>服装说明：【婚纱礼服】服装共计8套，男女各4套</p>
+				<p>造型说明：【化妆造型】化妆造型各4次（化妆，造型，配饰全免费）</p>
+			</div>
+			<div class="intro-box">
+				<b>场景</b>
+				<p>场景搭配：内外景搭配</p>
+				<p>内景数量：2 个</p>
+				<p>内景说明：雅颂美学馆</p>
+				<p>外景数量：2 个</p>
+				<p>外景说明：路易威仕环球影城</p>
+			</div>
+		</div>
+		
+		
+		<style>
+			.dialog{
+				position: fixed;
+				bottom: 0;
+				right: 0;
+				width: 380px;height: 400px;
+				border: 1px solid red;
+				background-color: #fff;
+			}
+			.dialog .dialog-top{
+				width: 380px;
+				height: 40px;
+				line-height: 40px;
+				font-weight: bold;
+				text-indent: 2em;
+				color: #fff;
+				background-color: lightblue;
+				position: relative;
+			}
+			.dialog .dialog-top .close{
+				color: red;
+				font-weight: bold;
+				position: absolute;
+				right: 5px;
+				top: 5px;
+			}
+			.dialog .dialog-center{
+				width: 380px;
+				height: 280px;
+				border-bottom: 2px solid #666;
+				position: relative;
+				overflow-y: scroll;
+			}
+			.dialog .dialog-center p{
+				width: 100%;
+				margin: 10px 0;
+				text-align: left;
+			}
+			.dialog .dialog-center .right{
+				width: 100%;
+				text-align: right;
+				color: gold;
+			}
+			.dialog .dialog-bottom #info{
+				float: left;
+			}
+			.dialog .dialog-bottom #send{
+				width: 60px;
+				height: 40px;
+				background-color: lightblue;
+				float: left;
+				margin-left: 50px;
+				margin-top: 25px;
+			}
+		</style>
+		
+		<!--对话框-->
+		<div class="dialog" id="dialog">
+			
+			<div class="dialog-top">
+				摄影有限公司
+				<span class="close">×</span>
+			</div>
+			<div class="dialog-center" id="middle">
+				<p>亲爱哒 欢迎光临维纳斯婚纱摄影成都总店!</p>
+				<p class="right">dfads</p>
+				<p class="right">dfads</p>
+				<p class="right">dfads</p>
+				<p class="right">dfads</p>
+				<p class="right">dfads</p>
+				<p class="right">dfads</p>
+				<p class="right">dfads</p>
+				<p class="right">dfads</p>
+				<p class="right">dfads</p>
+				<p class="right">dfads</p>
+				<p class="right">dfads</p>
+			</div>
+			<div class="dialog-bottom">
+				<textarea name="" rows="15" cols="30" id="info" placeholder="输入内容不能为空"></textarea>
+				<button id="send">发送</button>
+			</div>
+		</div>
+		
+		
 		<footer class="footer"></footer>
 		
 		<script src="../jquery-1.12.4.js"></script>
 		<script src="../common/header.js"></script>
 		<script src="../common/footer.js"></script>
+		<script>
+//			tab图切换
+			var $img=$(".content .left img");
+			var $li=$(".content .left ul li");
+			$li.on("click",function(){
+				var index=$(this).index();
+				$img.eq(index).siblings().fadeOut(2000).end().fadeIn(2000);
+				$(this).addClass("curr").siblings().removeClass("curr")
+			})
+			
+			
+//			dialog
+			$("#dialog #send").on("click",function(){
+				var _text=$("#info").val();
+				if(_text.trim()!==""){
+					var _p="<p class='right'>"+ _text +"</p>";
+//					$(_p).html(_text)
+					$("#middle").append(_p);
+					$("#info").val("");
+					$("#middle p").last()[0].scrollIntoView();
+				}
+			})
+			
+			
+			
+			$("#info").on("keydown",function(e){
+//				if(e.keyCode)
+//				console.log(e.keyCode,e.charCode)
+				if(e.keyCode===13 && e.ctrlKey){
+					var _text=$("#info").val();
+					if(_text.trim()!==""){
+						var _p="<p class='right'>"+ _text +"</p>";
+	//					$(_p).html(_text)
+						$("#middle").append(_p);
+						$("#info").val("");
+						$("#middle p").last()[0].scrollIntoView();
+					}
+				}
+			})
+		</script>
 	</body>
 </html>

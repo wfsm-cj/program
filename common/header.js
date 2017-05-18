@@ -4,16 +4,9 @@ $.ajax({
 	async:true,
 	success:function(data){
 		$(".header").html(data);
-	}
-});
-
-
-//导航的js
-//		console.log($(".nav .history"))
-window.onload=function(){//等页面加载完  异步请求不能获取
-	
-
-$(".nav .history").hover(function(){
+		
+		
+		$(".nav .history").hover(function(){
 				$(".nav .history .triangle").css({
 					transform: "rotate(180deg)",
 					transition: "all 0.5s"
@@ -43,7 +36,17 @@ $(".nav .history").hover(function(){
 				$(this).css("background","#666").children(".station-box").css("display","none").end()
 				.children("a").css("color","#fff");
 			})
-			
+		
+	}
+});
+
+
+//导航的js
+//		console.log($(".nav .history"))
+window.onload=function(){//等页面加载完  异步请求不能获取
+	
+
+	
 
 }
 //导航的js

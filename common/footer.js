@@ -7,12 +7,9 @@
 				success:function(data){
 //					console.log(data)
 					$(".footer").append(data);
-				}
-			})
-			
-			
-			
-			
+					
+					
+						
 			var i=1;
 			var timer=setInterval(foot,3000)// ----
 			function foot(){
@@ -27,5 +24,11 @@
 			},function(){
 				timer=setInterval(foot,1000)
 			})
+				}
+			})
+			
+			
+			
+		
 		
 //		<!--footer的js结束-->

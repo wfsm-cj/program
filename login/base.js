@@ -1,11 +1,12 @@
 //element节点   options正则参数
-function verify(element,options,str1,str2){
+function verify(element,options,str1,str2){//浏览器缓存问题
+//	console.log("element")
 	var info=element.value;
 	var flag=false;
 //	console.log(info==="")
 	if(info===""){
 		element.nextElementSibling.innerText=str1;
-		return;
+		return false;
 	}
 	for(var reg in options){
 		var aa=eval(options[reg]);//用eval()将字符串转为正则  
@@ -14,10 +15,11 @@ function verify(element,options,str1,str2){
 		}
 	}
 	if(flag===true){
-		console.log("true");
 		element.nextElementSibling.innerText="";
+		return true;
 	}else{
 		element.nextElementSibling.innerText=str2;
+		return false;
 	}
 }
 
@@ -47,13 +49,14 @@ function isTrue(element,picCode){
 	var code=element.value;
 	if(code===""){
 		element.nextElementSibling.nextElementSibling.innerHTML="请输入验证码";
-		return;
+		return false;
 	}
 //	console.log(code.toLowerCase())
 	if(code.toLowerCase()===picCode.toLowerCase()){
 		element.nextElementSibling.nextElementSibling.innerHTML="";
-		return;
+		return true;
 	}else{
 		element.nextElementSibling.nextElementSibling.innerHTML="验证码输入错误";
+		return false;
 	}
 }

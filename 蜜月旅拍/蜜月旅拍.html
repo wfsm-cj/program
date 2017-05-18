@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+
 	<head>
 		<meta charset="UTF-8">
 		<title></title>
@@ -11,84 +12,262 @@
 		<script src="js/picslice.js"></script>
 		<script src="../common/header.js"></script>
 	</head>
-	<body>
-		
-		<header class="header"></header>
-		
-		
-		 <!--中间内容-->
-    <div class="main">
-        <!--左边图片-->
-        <div class="m-left fl">
-            <img src="images/lef.jpg" alt="">
-            <span>纯真主义</span>
-        </div>
-        <!--中间图片特效-->
-        <div class="m-center" id="center">
-            <div id="img"></div>
-            <div id="btns">
 
-                <a href="#" class="btnstyle">
-                    <span id="btn_explode" type="button" value="" class="btn_01">
+	<body style="background: oldlace;">
+
+		<header class="header"></header>
+
+		<!--中间内容-->
+		<div class="main">
+			<!--左边图片-->
+			<div class="m-left fl">
+				<img src="images/lef.jpg" alt="">
+				<span>纯真主义</span>
+			</div>
+			<!--中间图片特效-->
+			<div class="m-center" id="center">
+				<div id="img"></div>
+				<div id="btns">
+
+					<a href="#" class="btnstyle">
+						<span id="btn_explode" type="button" value="" class="btn_01">
                         <img src="images/waterslice11.jpg" alt=""/>
                     </span>
-                    <span class="line line-top"></span>
-                    <span class="line line-right"></span>
-                    <span class="line line-bottom"></span>
-                    <span class="line line-left"></span>
-                </a>
-                <a href="#" class="btnstyle">
-                    <span id="btn_tile" value="" class="btn_02"> <img src="images/waterslice12.jpg" alt=""/></span>
-                    <span class="line line-top"></span>
-                    <span class="line line-right"></span>
-                    <span class="line line-bottom"></span>
-                    <span class="line line-left"></span>
-                </a>
-                <a href="#" class="btnstyle">
-                    <span id="btn_bars" type="button" value="" class="btn_03">
+						<span class="line line-top"></span>
+						<span class="line line-right"></span>
+						<span class="line line-bottom"></span>
+						<span class="line line-left"></span>
+					</a>
+					<a href="#" class="btnstyle">
+						<span id="btn_tile" value="" class="btn_02"> <img src="images/waterslice12.jpg" alt=""/></span>
+						<span class="line line-top"></span>
+						<span class="line line-right"></span>
+						<span class="line line-bottom"></span>
+						<span class="line line-left"></span>
+					</a>
+					<a href="#" class="btnstyle">
+						<span id="btn_bars" type="button" value="" class="btn_03">
                         <img src="images/waterslice13.jpg" alt=""/>
                     </span>
-                    <span class="line line-top"></span>
-                    <span class="line line-right"></span>
-                    <span class="line line-bottom"></span>
-                    <span class="line line-left"></span>
-                </a>
-                <a href="#" class="btnstyle">
-                    <span id="btn_cube" type="button" value="" class="btn_04">
+						<span class="line line-top"></span>
+						<span class="line line-right"></span>
+						<span class="line line-bottom"></span>
+						<span class="line line-left"></span>
+					</a>
+					<a href="#" class="btnstyle">
+						<span id="btn_cube" type="button" value="" class="btn_04">
                         <img src="images/waterslice14.jpg" alt=""/>
                     </span>
-                    <span class="line line-top"></span>
-                    <span class="line line-right"></span>
-                    <span class="line line-bottom"></span>
-                    <span class="line line-left"></span>
-                </a>
-                <a href="#" class="btnstyle" id="lasta">
-                    <span id="btn_turn" type="button" value="" class="btn_05">
+						<span class="line line-top"></span>
+						<span class="line line-right"></span>
+						<span class="line line-bottom"></span>
+						<span class="line line-left"></span>
+					</a>
+					<a href="#" class="btnstyle" id="lasta">
+						<span id="btn_turn" type="button" value="" class="btn_05">
                         <img src="images/waterslice15.jpg" alt=""/>
                     </span>
-                    <span class="line line-top"></span>
-                    <span class="line line-right"></span>
-                    <span class="line line-bottom"></span>
-                    <span class="line line-left"></span>
-                </a>
-            </div>
-        </div>
-        <!--右边图片-->
-        <div class="m-right fl">
-            <img src="images/rig.png" alt="">
-            <span>简约风尚</span>
-        </div>
-    </div>
-    <!--左边点击显示大图-->
-    <div class="imgbig ibig1">
-        <span>×</span>
-        <img src="images/lefbig.jpg" alt="" class="leftimg">
-    </div>
-    <!--右边点击显示大图-->
-    <div class="imgbig ibig2">
-        <span>×</span>
-        <img src="images/rigbig.png" alt="" class="rigimg">
-    </div>
-</div>
+						<span class="line line-top"></span>
+						<span class="line line-right"></span>
+						<span class="line line-bottom"></span>
+						<span class="line line-left"></span>
+					</a>
+				</div>
+			</div>
+			<!--右边图片-->
+			<div class="m-right fl">
+				<img src="images/rig.png" alt="">
+				<span>简约风尚</span>
+			</div>
+		</div>
+		<!--左边点击显示大图-->
+		<div class="imgbig ibig1">
+			<span>×</span>
+			<img src="images/lefbig.jpg" alt="" class="leftimg">
+		</div>
+		<!--右边点击显示大图-->
+		<div class="imgbig ibig2">
+			<span>×</span>
+			<img src="images/rigbig.png" alt="" class="rigimg">
+		</div>
+		</div>
+
+		<style>
+			#container {
+				width: 80%;
+				height: 200px;
+				margin: 50px auto;
+				border: 1px solid red;
+				position: relative;
+			}
+			
+			#container .water-box {
+				width: 230px;
+				border: 1px solid #ccc;
+				box-shadow: 1px 1px 3px #CCCCCC;
+				padding: 15px;
+				background-color: oldlace;
+				border-radius: 8px;
+				float: left;
+				margin-bottom: 15px;
+				position: absolute;
+				top: 0;
+				left: 0;
+			}
+			
+			#container .water-box img {
+				width: 100%;
+			}
+		</style>
+
+		<!--瀑布流-->
+		<div id="container">
+			<div class="water-box">
+				<img src="images/1.jpg" alt="" />
+			</div>
+			<div class="water-box">
+				<img src="images/2.jpg" alt="" />
+			</div>
+			<div class="water-box">
+				<img src="images/3.jpg" alt="" />
+			</div>
+			<div class="water-box">
+				<img src="images/4.jpg" alt="" />
+			</div>
+			<div class="water-box">
+				<img src="images/5.jpg" alt="" />
+			</div>
+
+		</div>
+		<!--<img src="http://image.tianjimedia.com/uploadImages/2016/340/54/ZAQK3M441454.jpg" alt="" />-->
+
+		<script>
+			$(function() {
+				window.onload = function() {
+					//				
+					waterfull()
+				}
+
+				function waterfull() {
+					var imgWidth = $(".water-box").outerWidth();
+					var containerWidth = $("#container").width();
+					var cols = Math.floor(containerWidth / imgWidth);
+					var spacing = Math.floor((containerWidth - cols * imgWidth) / (cols + 1))
+					var arr = new Array(cols);
+					var len = $(".water-box").length;
+					arr.fill(0);
+					//					console.log(cols,containerWidth,spacing,arr)
+					$(".water-box").css("margin-left", spacing);
+					for(var i = 0; i < len; i++) {
+						var index = shortest(arr);
+						var _left = (index) * (imgWidth + spacing);
+						var _top = arr[index];
+						$(".water-box").eq(i).css({
+							left: _left,
+							top: _top
+						})
+						arr[index] = arr[index] + $(".water-box").eq(i).outerHeight() + 20;
+					}
+
+					//从本地动态添加图片
+					var html = "";
+					for(var i = 8; i < 20; i++) {
+						html += '<div class="water-box"><img src="images/' + i + '.jpg" alt="" /></div>'
+					}
+					//					console.log(html)
+					////					$("#container").append(html);
+					$(html).each(function(index, element) { //图片的load事件
+						//						console.log($(element).children("img"))
+						$(element).children("img").on("load", function() {
+							//							console.log("Aaa")
+							var idx = shortest(arr);
+							$("#container").append(element); //加载完后才添加图片，，没有加载完有错误
+							var _top = arr[idx];
+							var _left = idx * (imgWidth + spacing)
+							$(element).css({
+								left: _left,
+								top: _top
+							})
+							arr[idx] += $(element).outerHeight() + 10;
+							console.log(idx, _left, _top)
+						})
+						//					
+					})
+					//					
+
+					//ajax异步加载图片
+					var isLoading=false;//是否正在加载
+					$(window).on("scroll", function() {
+						var _scrollTop = $(window).scrollTop();
+						var _winHeight = $(window).height();
+						var _minColHeight = Math.min.apply(this, arr);
+
+						if(_scrollTop > _minColHeight - _winHeight - 100 && !isLoading) {
+								isLoading=true;
+								$.ajax({
+									type: "get",
+									dataType: "json",
+//									url: "http://route.showapi.com/852-2?showapi_appid=38340&showapi_sign=3048a295f7ab49fdbcd598470e736163&type=4002&page=1&",
+									url : "http://route.showapi.com/341-3?showapi_appid=38363&showapi_sign=ee39c13247274aa1ac61c5c72e5965c3",
+									async: true,
+									success: function(data) {
+										isLoading=false;
+								//							console.log(data.showapi_res_body.pagebean.contentlist);
+								var obj = data.showapi_res_body.contentlist;
+								console.log(obj)
+								var html = "";
+								obj.forEach(function(curr, index) {
+									var pic = curr.img;
+									html += '<div class="water-box"><img src="' + pic + '"></div>';
+									//								console.log(pic)
+								})
+															console.log(html)
+								//							console.log($(html).children("img")[0])
+//								$(html).children("img").each(function(index, element) {
+//									$(element).on("load", function() {
+//										console.log("aaa")
+//										var idx = shortest(arr);
+//										var _left = idx * (imgWidth + spacing);
+//										var _top = arr[idx];
+//										$("#container").append(element);
+//										$(element).css({
+//											left: _left,
+//											top: _top
+//										});
+//										arr[idx] += $(element).outerHeight() + 10;
+//									})
+//								})
+								$(html).each(function(index, element) {
+									$(element).children("img").on("load", function() {
+										console.log("aaa")
+										var idx = shortest(arr);
+										var _left = idx * (imgWidth + spacing);
+										var _top = arr[idx];
+										$("#container").append(element);
+										$(element).css({
+											left: _left,
+											top: _top
+										});
+										arr[idx] += $(element).outerHeight() + 10;
+									})
+								})
+								//							console.log(html)
+								}
+								})
+						}
+					})
+					
+
+				}
+
+				function shortest(arr) {
+					var min = Math.min.apply(null, arr);
+					return $.inArray(min, arr); //索引
+				}
+
+			})
+		</script>
+
 	</body>
+
 </html>

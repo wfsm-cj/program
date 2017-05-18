@@ -72,7 +72,8 @@ header h1{
 #fullScreen{
 	position: relative;
 	/*overflow: hidden;*/
-	height: 676px;
+	/*height: 676px;*/
+	height: 100%;
 	/*width: 600px;
 	height: 600px;
 	margin: 100px auto;
@@ -80,15 +81,18 @@ header h1{
 }
 #fullScreen ul{
 	position: absolute;
+	height: 100%;
 	left: 0;
 }
 #fullScreen ul li{
 	float: left;
 	width: 1366px;
-	height: 676px;
+	/*height: 676px;*/
+	height: 100%;
 }
 #fullScreen ul li img{
 	width: 100%;
+	height: 100%;
 }
 /*设置圆点位置*/
 #fullScreen #circle{
