@@ -53,7 +53,7 @@
 				 	<!--加到idcheap中-->
 				 	<div class="cheap-box" >
 				 		<img src="img/cheap600_400_1.jpg" alt="" />
-				 		<p><a href="#">预付100低900</a></p>
+				 		<p ><a href="#" id="name">预付100低900</a></p>
 				 		<p><span>任意拍，服装不限套数</span></p>
 				 		<p class="price"><em>￥</em><b>3999</b><span class="bg">预约有礼</span><span>门店价￥10000</span></p>
 				 		<div class="cheap-bottom"><span>已有365人关注</span><span>维纳婚纱摄影</span></div>
@@ -101,7 +101,7 @@
 			<% for(var i=0;i<price.length;i++){%>
 			<div class="cheap-box" >
 		 		<img src="<%=imgUrl[i]%>" alt="" />
-		 		<p><a href="../shangpingxiangqing/info.html"><%=tip[i]%></a></p>
+		 		<p ><a href="../shangpingxiangqing/info.html" id="name"><%=tip[i]%></a></p>
 		 		<p><span><%=info[i]%></span></p>
 		 		<p class="price"><em>￥</em><b><%=price[i]%></b><span class="bg">预约有礼</span><span>门店价￥<%=highPrice[i]%></span></p>
 		 		<div class="cheap-bottom"><span>已有365人关注</span><span>维纳婚纱摄影</span></div>
@@ -116,6 +116,107 @@
 		<script>
 //			var user=$.cookie("emailTel")
 //			$("#user").text(user)
+
+//			console.log($(".cheap-box")[0])
+			$(".cheap-box").on("click",function(){
+				var _name=$(this).find("#name").text();
+				var _price=$(this).children(".price").children("b").text();
+//				console.log(_name)
+				var _amount=1;
+				var _emailTel=$.cookie("emailTel");
+				
+//				var arr=[]
+				var product={
+					name:_name,
+					price:_price,
+					amount:_amount,
+					emailTel:_emailTel
+				}
+//				arr.push(product)
+				//添加到cookie
+				$.cookie.json=true;
+//				$.cookie.raw=true;//加上是个string 不加是个object
+//				$.cookie("products",arr)
+//				console.log($.cookie(),product.name)
+				var _products=$.cookie("products") || [];
+				var index=exists(product.name,_products);//返回的第几个
+//				console.log(index)
+				if(index===-1){
+					_products.push(product);
+					console.log("新的");
+//					$.ajax({
+//						type:"get",
+//						url:"../admin/cart.php",
+//						async:true,
+//						data:{
+//							action:"add",
+//							emailTel:"15183565102",
+//							name:product.name,
+//							price:product.price,
+//							amount:1
+//						},
+//						success:function(data){
+//							console.log(data)
+////							alert("添加成功")
+//						}
+//					});
+//					$.cookie("products",_products)
+				}else{
+					_products[index].amount++;
+//					$.cookie("products",_products)
+//					$.ajax({
+//						type:"get",
+//						url:"../admin/cart.php",
+//						async:true,
+//						data:{
+//							action:"update",
+//							emailTel:"15183565102",
+//							amount:_products[index].amount
+//						},
+//						success:function(data){
+////							alert("修改成功")
+//							console.log(data)
+//						}
+//					});
+					console.log(_products[index].amount);
+				}
+				
+				$.cookie("products",_products,{expires:7,path:'/'});//存回到cookie中
+//				console.log(_products.name)
+//				$.cookie("products",{
+//					name:_name,
+//					price:_price	
+//				},{expires:7,path:'/'})
+//				console.log($.cookie())
+				
+				//发送到服务器
+//				$.ajax({
+//					type:"get",
+//					url:"../admin/cart.php",
+//					async:true,
+//					data:{
+//						emailTel:_emailTel,
+//						name:_name,
+//						price:_price,
+//						amount:_amount
+//					},
+//					success:function(){
+//						
+//					}
+//				});
+				
+			})
+			
+			
+			function exists(name,products){
+				for(var i=0,len=products.length;i<len;i++){
+					if(products[i].name===name){
+						return i;//第几个一样
+					}
+				}
+				return -1;//没找到返回-1
+			}
+		
 		</script>
 	</body>
 </html>

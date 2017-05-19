@@ -5,6 +5,7 @@
 		<title></title>
 		<link rel="stylesheet" href="../首页/css/base.css" />
 		<script src="../jquery-1.12.4.js"></script>
+		<script src="../artTemplate/template-web.js"></script>
 		<script src="../common/jquery.cookie.js"></script>
 		<script src="../common/header.js"></script>
 		<script src="../footer.js"></script>
@@ -13,10 +14,60 @@
 				width: 1150px;
 				height: 300px;
 				border: 1px solid red;
-				margin: 0 auto;
+				margin: 50px auto;
+				position: relative;
 			}
-			#cart .box{
+			#cart-header div,.main_body div{
+				/*float: left;*/
+				width: 100px;height: 30px;line-height: 30px;
+				border: 1px solid;
+				float: left;
 				
+			}
+			.main_body{
+				/*overflow: hidden;*/
+				width: 100%;
+			}
+			.main_body .name,#cart-header .name{
+				width: 250px;
+			}
+			.main_body .amount{
+				width: 30px;
+			}
+			#cart-header,.main_body{
+				clear: both;
+			}
+			#main{
+				height: auto;
+			}
+			
+			#address{
+				position: absolute;
+				bottom: 100px;
+				right: 20px;
+				/*width: 100px;
+				height: 50px;*/
+				/*background-color: orange;*/
+			}
+			.sum{
+				position: absolute;
+				bottom: 50px;
+				right: 20px;
+				width: 200px;
+				height: 50px;
+				/*background-color: orange;*/
+				display: block;
+				border: 1px solid red;
+				/*float: left;*/
+			}
+			.sum #btn{
+				width: 100px;
+				height: 50px;
+				background-color: orange;
+				margin-right: 20px;
+			}
+			.sum #sum{
+				border: 1px solid gold;
 			}
 		</style>
 	</head>
@@ -24,10 +75,66 @@
 		
 		<header class="header"></header>
 		<div id="cart">
-			<div class="box">
-				<span></span>
+			<div id="cart-header">
+				<div><label for="selectAll"><input type="checkbox" id="selectAll"/>全选 </label></div>
+				<div class="name">商品名称</div>
+				<div>商品价格</div>
+				<div>数量</div>
+				<div>操作</div>
 			</div>
+			
+			<div id="main">
+				
+			</div>
+			
+			<div id="address">
+				<select name="" id="province">
+					<option value="">111</option>
+				</select>
+				<select name="" id="city"></select>
+				<select name="" id="region"></select>
+				
+			</div>
+			
+			
+			<div class="sum">
+				<button id="btn">合计</button>
+				<span id="sum">dfasfa</span>
+			</div>
+			<!--<div class="main_body">
+				<div > <input type="text" class="select" /></div>
+				<div class="name">商品1</div>
+				<div class="price">3999</div>
+				<div> <span class="minus">-</span><input type="text" value="1" class="amount"/> <span class="add">+</span></div>
+				<div class="del"><a href="javascript:void(0)">删除</a></div>
+			</div>-->
+			<!--<div id="main_body">
+				<div> <input type="text"  /></div>
+				<div>商品1</div>
+				<div>3999</div>
+				<div>1</div>
+				<div>删除</div>
+			</div>-->
 		</div>
 		<footer class="footer"></footer>
+		
+		<script type="text/html" id="cartTemplate">
+			<% for(var i=0;i<products.length;i++){var p=products[i];%>
+				<div class="main_body">
+					<div > <input type="checkbox" class="select" /></div>
+					<div class="name"><%=p.name%></div>
+					<div class="price"><%=p.price%></div>
+					<div> <span class="minus">-</span><input type="number" value="<%=p.amount%>" class="amount"/> <span class="add">+</span></div>
+					<div class="del"><a href="javascript:void(0)">删除</a></div>
+				</div>
+			<%}%>
+				
+			
+		</script>
+		<script src="cart.js"></script>
+		
+		<script>
+			
+		</script>
 	</body>
 </html>

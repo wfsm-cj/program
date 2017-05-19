@@ -66,6 +66,7 @@ $(document).ready(function(){
 						$.cookie("emailTel",_emailTel,{expires:7,path:'/'})
 						$.cookie("password",_password,{expires:7,path:'/'})
 //						location.href="../shop/shop.html";
+						alert("成功")
 					}else{
 						$("#login").html("登陆失败,请重新登陆");
 					}

@@ -49,17 +49,20 @@ a{
 	float: left;
 }
 .nav .nav-left #userspan{
-	border: 1px solid red;
+	/*border: 1px solid red;
 	/*display: inline-block;*/
 	width: 100px;
-	/*height: 30px;*/
-	/*line-height: 30px;*/
+	height: 35px;
+	word-break: keep-all;
+	/*height: 35px;
+	line-height: 35px;*/
 	overflow: hidden;
+	text-overflow: ellipsis;
 }
 .nav .nav-left #user{
-	width: 100px;
-	height: 30px;
-	display: inline-block;
+	/*width: 100px;
+	height: 35px;
+	line-height: 35px;*/
 }
 /*.nav .nav-left #user{
 	display: inline-block;

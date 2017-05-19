@@ -90,7 +90,10 @@ $(function(){
 				success:function(data){
 //					console.log(data)
 					if(data==="true"){
+						$.cookie("emailTel",_emailTel,{expires:7,path:'/'});
+						$.cookie("emailTel",_emailTel,{expires:7,path:'/'});
 						location.href="success.html";
+						
 					}else{
 						alert("手机邮箱已存在");
 					}

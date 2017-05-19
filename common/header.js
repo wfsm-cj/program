@@ -41,9 +41,14 @@ $.ajax({
 //			$.cookie("emailTel","hello",{expires:7,path:'/'})
 //		console.log("aaa")
 			var user=$.cookie("emailTel")
-			
-			console.log(user);
-			$("#user").text("欢迎"+user)
+			console.log(user)
+			if(user!==undefined){
+				console.log("1")
+				$("#user").text("欢迎"+user)
+			}else{
+				$("#user").text("hi，请登录")
+			}
+//			console.log(user);
 			
 //			$("#user")
 			
